@@ -2,7 +2,9 @@ package kung.com.dcsoft.myapplication;
 
 
 import android.os.Bundle;
+import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
+import android.support.v7.widget.Toolbar;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -12,7 +14,22 @@ import android.view.ViewGroup;
  * A simple {@link Fragment} subclass.
  */
 public class RegisterFragment extends Fragment {
+    @Override
+    public void onActivityCreated(@Nullable Bundle savedInstanceState) {
+        super.onActivityCreated(savedInstanceState);
+//        Create Toolbar
+        createToolbar();
 
+
+    }// Main Method
+
+    private void createToolbar() {
+        Toolbar toolbar = getView().findViewById(R.id.toolbarRegister);
+        ((MainActivity)getActivity()).setSupportActionBar(toolbar);
+        ((MainActivity)getActivity()).getSupportActionBar().setTitle(R.string.Register);
+        ((MainActivity)getActivity()).getSupportActionBar().setSubtitle(R.string.message_have_space);
+
+    }
 
     public RegisterFragment() {
         // Required empty public constructor

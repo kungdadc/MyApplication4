@@ -8,7 +8,7 @@
 
     <!--toolbar-->
     <android.support.v7.widget.Toolbar
-        android:id="@+id/toobarRegister"
+        android:id="@+id/toolbarRegister"
         android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
         android:background="@color/colorPrimary"
         android:layout_width="match_parent"
